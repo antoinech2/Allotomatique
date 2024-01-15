@@ -1,6 +1,6 @@
 import {Paper, Button} from '@mui/material/';
 
-import listes from '../data/listes.json'
+import listes from './../../data/listes.json'
 
 export default function Header() {
     return (
