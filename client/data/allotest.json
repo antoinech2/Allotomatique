@@ -1,0 +1,16 @@
+{
+    "BDE1":
+    [
+        {"name" : "Lasagne",
+        "description" : "miam", "id" : 1324345},
+        {"name" : "baguette",
+        "description" : "oui oui baguette", "id" : 14573}
+    ],
+    "BDE2":
+    [
+        {"name" : "Chat",
+        "description" : "miam", "id" : 1324345},
+        {"name" : "Bébou",
+        "description" : "oui oui baguette", "id" : 14573}
+    ]
+}

@@ -1,13 +1,19 @@
-import Stack from '@mui/material/Stack';
-import Header from './components/Header';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Liste from './pages/Liste';
+import Layout from './pages/Layout';
+
+import listes from './../data/listes.json'
+
 
 function App() {
   return (
-    <div className="App">
-      <Stack spacing={2}>
-        <Header />
-      </Stack>
-    </div>
+    <BrowserRouter>
+    <Routes>
+      <Route path="/" element={<Layout />}>
+          {listes.map((liste) => (<Route path={"liste"+liste.id} element={<Liste listeId={liste.id} />} />))}
+      </Route>
+    </Routes>
+    </BrowserRouter>
   );
 }
 

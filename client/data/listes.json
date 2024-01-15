@@ -1,5 +1,10 @@
 [
     {"type" : "BDE",
     "name" : "Imt'somnia",
-    "icon" : "assets/images/Logo imtsomnia.jpg"}
+    "id" : "BDE1",
+    "icon" : "assets/images/Logo imtsomnia.jpg"},
+    {"type" : "BDE",
+    "name" : "Imt'pulsion",
+    "id" : "BDE2",
+    "icon" : "assets/images/Logo imtpulsion.jpg"}
 ]
