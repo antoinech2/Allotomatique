@@ -11,7 +11,8 @@ export default function Header() {
         <Paper elevation={10}> 
             <Stack direction = "row">
                 <img src={"assets/images/Logo allotomatique.png"} alt = "Logo allotomatique" width="80" height="80" style={{margin: 5}}/>
-            {listes.map((liste) => (<Link to={"/liste"+liste.id}><Button color="success"><img src={liste.icon} alt = "Logo de la liste" width="40" height="40" style={{margin: 5}}/>{liste.name}</Button></Link>))}
+                {listes.map((liste) => (<Link to={"/liste"+liste.id}><Button color="success"><img src={liste.icon} alt = "Logo de la liste" width="40" height="40" style={{margin: 5}}/>{liste.name}</Button></Link>))}
+                <Link to={"/allAllo"}><Button color="success"><img src={"assets/images/gros chat.jpg"} alt = "Logo toutes listes" width="40" height="40" style={{margin: 5}}/>{"Tous les allos"}</Button></Link>
             </Stack>
         </Paper>
         <Outlet />
