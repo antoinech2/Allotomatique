@@ -2,14 +2,14 @@
     "BDE1":
     [
         {"name" : "Lasagne",
-        "description" : "miam", "id" : 1324345},
+        "description" : "miam", "id" : 1324345, "available" : "true"},
         {"name" : "baguette",
-        "description" : "oui oui baguette", "id" : 14573}
+        "description" : "oui oui baguette", "id" : 14573, "available" : "false"}
     ],
     "BDE2":
     [
         {"name" : "Chat",
-        "description" : "miam", "id" : 1324345},
+        "description" : "miam", "id" : 1324345, "available" : "unknowned"},
         {"name" : "Bébou",
         "description" : "oui oui baguette", "id" : 14573}
     ]
