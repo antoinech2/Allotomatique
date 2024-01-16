@@ -1,44 +1,91 @@
 {
-    "BDE1":
-    [
-        {"name" : "Lasagne",
-        "description" : "miam", "id" : 1324345, "available" : "true"},
-        {"name" : "baguette",
-        "description" : "oui oui baguette", "id" : 14573, "available" : "false"}
+    "BDE1": [
+        {
+            "name": "Lasagnes",
+            "description": "miam",
+            "id": 1324345,
+            "available": "true",
+            "command": {
+                "count": 3
+            },
+            "stats":
+            {
+                "command_count": 2,
+                "delivery_time": "13m56"
+            }
+        },
+        {
+            "name": "baguette",
+            "description": "oui oui baguette",
+            "id": 14573,
+            "available": "false"
+        }
     ],
-    "BDE2":
-    [
-        {"name" : "Chat",
-        "description" : "miam", "id" : 1324345, "available" : "unknowned"},
-        {"name" : "Bébou",
-        "description" : "oui oui baguette", "id" : 14573}
+    "BDE2": [
+        {
+            "name": "Chat",
+            "description": "miam",
+            "id": 1324345,
+            "available": "unknowned"
+        },
+        {
+            "name": "Bébou",
+            "description": "oui oui baguette",
+            "id": 14573
+        }
     ],
-    "BDA1":
-    [
-        {"name" : "Lasagne",
-        "description" : "miam", "id" : 1324345, "available" : "true"},
-        {"name" : "baguette",
-        "description" : "oui oui baguette", "id" : 14573, "available" : "false"}
+    "BDA1": [
+        {
+            "name": "Lasagne",
+            "description": "miam",
+            "id": 1324345,
+            "available": "true"
+        },
+        {
+            "name": "baguette",
+            "description": "oui oui baguette",
+            "id": 14573,
+            "available": "false"
+        }
     ],
-    "BDA2":
-    [
-        {"name" : "Chat",
-        "description" : "miam", "id" : 1324345, "available" : "unknowned"},
-        {"name" : "Bébou",
-        "description" : "oui oui baguette", "id" : 14573}
+    "BDA2": [
+        {
+            "name": "Chat",
+            "description": "miam",
+            "id": 1324345,
+            "available": "unknowned"
+        },
+        {
+            "name": "Bébou",
+            "description": "oui oui baguette",
+            "id": 14573
+        }
     ],
-    "BDS1":
-    [
-        {"name" : "Lasagne",
-        "description" : "miam", "id" : 1324345, "available" : "true"},
-        {"name" : "baguette",
-        "description" : "oui oui baguette", "id" : 14573, "available" : "false"}
+    "BDS1": [
+        {
+            "name": "Lasagne",
+            "description": "miam",
+            "id": 1324345,
+            "available": "true"
+        },
+        {
+            "name": "baguette",
+            "description": "oui oui baguette",
+            "id": 14573,
+            "available": "false"
+        }
     ],
-    "BDS2":
-    [
-        {"name" : "Chat",
-        "description" : "miam", "id" : 1324345, "available" : "unknowned"},
-        {"name" : "Bébou",
-        "description" : "oui oui baguette", "id" : 14573}
+    "BDS2": [
+        {
+            "name": "Chat",
+            "description": "miam",
+            "id": 1324345,
+            "available": "unknowned"
+        },
+        {
+            "name": "Bébou",
+            "description": "oui oui baguette",
+            "id": 14573
+        }
     ]
 }
