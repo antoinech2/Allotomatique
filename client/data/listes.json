@@ -6,5 +6,21 @@
     {"type" : "BDE",
     "name" : "Imt'pulsion",
     "id" : "BDE2",
-    "icon" : "assets/images/Logo imtpulsion.jpg"}
+    "icon" : "assets/images/Logo imtpulsion.jpg"},
+    {"type" : "BDA",
+    "name" : "Art'emis",
+    "id" : "BDA1",
+    "icon" : "assets/images/Logo artemis.jpg"},
+    {"type" : "BDA",
+    "name" : "Taul'art",
+    "id" : "BDA2",
+    "icon" : "assets/images/Logo Taul'art.png"},
+    {"type" : "BDS",
+    "name" : "Atl'as",
+    "id" : "BDS1",
+    "icon" : "assets/images/Logo atlas.png"},
+    {"type" : "BDS",
+    "name" : "Pir'as'tes",
+    "id" : "BDS2",
+    "icon" : "assets/images/Logo piraste.png"}
 ]
