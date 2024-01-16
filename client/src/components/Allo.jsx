@@ -2,10 +2,10 @@ import { Card, CardHeader, CardContent, Stack, Chip, Box } from '@mui/material/'
 import Divider from '@mui/material-next/Divider';
 import {Check as CheckIcon, Close as CloseIcon, QuestionMark as QuestionMarkIcon} from '@mui/icons-material/';
 
-export default function Allo({ id, value }) {
+export default function Allo({ id, value, listeName, showListeName = false}) {
     return (
         <Card variant="outlined">
-            <CardHeader title={value.name}>
+            <CardHeader title={value.name + (showListeName ?" - " + listeName : "")}>
             </CardHeader>
             <CardContent>
                 <Stack direction="row" spacing={5} mb={2} display="flex" divider={<Divider orientation="vertical" flexItem />}>
