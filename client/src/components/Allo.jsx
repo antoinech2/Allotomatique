@@ -1,11 +1,14 @@
 import { Card, CardHeader, CardContent, Stack, Chip, Box, TextField, CardActions, Button } from '@mui/material/';
 import Divider from '@mui/material-next/Divider';
 import {Check as CheckIcon, Close as CloseIcon, QuestionMark as QuestionMarkIcon} from '@mui/icons-material/';
+import ApiService from '../services/api';
 
-export default function Allo({ id, value, listeName, showListeName = false}) {
+
+export default function Allo({ id, value, listeId, listeName, showListeName = false}) {
 
     function handleSubmit(e){
         e.preventDefault()
+        ApiService.commandAllo(listeId, id)
     }
 
     return (
