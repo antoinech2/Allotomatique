@@ -1,5 +1,5 @@
 import Header from "../components/Header"
-import Stack from '@mui/material/Stack';
+import {Stack, Box} from '@mui/material/';
 import CommandDetails from "../components/CommandDetails";
 
 export default function Layout(){
@@ -7,8 +7,16 @@ export default function Layout(){
         <div className="App">
       <Stack spacing={2}>
         <Header />
-        <CommandDetails width={200} style={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}/> 
+        <Box style={{
+        height: 100,
+        width: '20%',
+        right : "5px",
+        top : "20%",
+        position: 'fixed',
+      }}><CommandDetails/> </Box>
       </Stack>
+      
+      
     </div>
     )
 }
