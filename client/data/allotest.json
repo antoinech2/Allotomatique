@@ -6,11 +6,13 @@
             "id": 1324345,
             "available": "true",
             "command": {
-                "count": 3
+                "count": 3,
+                "waiting" : 2
             },
             "stats":
             {
                 "command_count": 2,
+                "recieved_command_count" : 1,
                 "delivery_time": "13m56"
             }
         },
