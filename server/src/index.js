@@ -5,12 +5,15 @@ const port = process.env.PORT || 3001
 
 import CommandAllo from "./routes/command.js"
 import Artemis from "./bot/listes/artemis.ts";
+import { scrapForm } from "./scrapper/formRetriever.js";
 
 app.use(express.json())
 .use(cors())
 
-app.get('/', (req, res) => {
-    res.json("Ok")
+app.get('/', async (req, res) => {
+  let form = await scrapForm('http://spatulas.chastellux.net/');
+  console.log(form);
+  res.json({ "form": form });
 })
 
 
