@@ -40,7 +40,7 @@ export default function Allo({ id, value, listeId, listeName, showListeName = fa
             <CardHeader title={value.name + (showListeName ?" - " + listeName : "")}>
             </CardHeader>
             <CardContent>
-                <Stack direction="row" spacing={5} mb={2} display="flex" divider={<Divider orientation="vertical" flexItem />}>
+                <Stack direction="row" spacing={5} mb={2} display="flex" sx={{ maxWidth: '75%'}} divider={<Divider orientation="vertical" flexItem />}>
                     <Stack spacing={1.5}>
                         <Box>{value.description}</Box>
                         {value?.command?.waiting > 1 ? <Box>{value?.command?.waiting} commandes en attente...</Box> : null}
