@@ -1,13 +1,14 @@
 {
     "compilerOptions": {
         "lib": ["ES2022"],
-        "module": "ES2022",
+        "module": "esnext",
         "moduleResolution": "Node",
         "target": "ES2022",
         "esModuleInterop": true,
         "allowJs": true,
         "allowImportingTsExtensions" : true,
         "emitDeclarationOnly" : true,
-        "declaration" : true
+        "declaration" : true,
+        "resolveJsonModule" : true,
     }
 }

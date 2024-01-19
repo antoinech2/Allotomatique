@@ -1,0 +1,114 @@
+[
+    {
+      "alloTitle": "AlloWrap",
+      "alloDesc": "Vous l'attendiez tous, le fameux wrap special Atl'AS avec ses oignons caramélisés revient pour les Allos et il est encore  meilleur !” - You have been waiting for it and it's finally here : ATL'AS’ special Wrap! With its caramelised onions, he is even better than ever! ",
+      "id": "1",
+      "alergensText": "Contains: milk",
+      "state": "open",
+      "formType": "wrap-form"
+    },
+    {
+      "alloTitle": "AlloCarbo",
+      "alloDesc": "Vous aimez les pâtes ? Vous aimez la carbo ? Alors vous allez adorer notre version du plat préféré des Atlantes - Do you like pasta? Do you like carbo? Then you're going to love our version of the Atlantes",
+      "id": "2",
+      "alergensText": "Contains: milk",
+      "state": "open",
+      "formType": "carbo-form"
+    },
+    {
+      "alloTitle": "Allo Crêpes à la Yannig",
+      "alloDesc": "Vous êtes bretons ? Vous avez aimé nos crêpes de l'aprem ? Cette fois-ci elles vous seront livrées chaudes avec quelques clics en un temps record - Did you like our afternoon crêpes? This time they'll be delivered hot.",
+      "id": "3",
+      "alergensText": "Contains: eggs, milk,...",
+      "state": "open",
+      "formType": "crepe-form"
+    },
+    {
+      "alloTitle": "Allo Mousse",
+      "alloDesc": "Ce n’est pas ce à quoi vous vous attendez, c’est une version miniature pour votre évier - It's not what you'd expect, it's a miniature version for your sink.",
+      "id": "4",
+      "alergensText": "",
+      "state": "open",
+      "formType": "mousse-form"
+    },
+    {
+      "alloTitle": "Allo Plateau",
+      "alloDesc": "Alors même qu’on vous apporte à manger en continu, vous allez au self et que vous êtes trop paresseux. On s’occupe de débarrasser votre table pour vous. - Even though we bring you food all the time, you go to the cafeteria and you're too lazy. We can clean your table for you.",
+      "id": "5",
+      "alergensText": "",
+      "state": "open",
+      "formType": "plateau-form"
+    },
+    {
+      "alloTitle": "Allo tiramisu",
+      "alloDesc": " Une touche sucrée Italienne pour le plaisir de vos papilles -  A sweet Italian touch for everyone's pleasure - An Italian sweet bite of happiness ",
+      "id": "6",
+      "alergensText": "Contains: milk",
+      "state": "open",
+      "formType": "tiramisu-form"
+    },
+    {
+      "alloTitle": "Allo lasagne",
+      "alloDesc": "Quoi de mieux qu'une bonne lasagne bien garnie après une journée bien remplie ? A partir de dimanche - What's better than a good perfectly garnished lasagna after a full day? Starting from sunday",
+      "id": "7",
+      "alergensText": "",
+      "state": "open",
+      "formType": "lasagne-form"
+    },
+    {
+      "alloTitle": "Allo café",
+      "alloDesc": "Un coup de fatigue ? Soyez revitalisé en un seul clic - Tired? Let us bring you your fair share of energy for the day with our coffee ",
+      "id": "8",
+      "alergensText": "",
+      "state": "open",
+      "formType": "cafe-form"
+    },
+    {
+      "alloTitle": "Allo porte",
+      "alloDesc": "Déménagement ! On emporte la porte de vos voisins ou la personne de votre choix",
+      "id": "9",
+      "alergensText": "",
+      "state": "open",
+      "formType": "porte-form"
+    },
+    {
+      "alloTitle": "Allo chiné",
+      "alloDesc": "Cinéphile ? Chichaphile ? Profitez de vos films préférés dans une ambiance tamisée accompagné d'une chicha ",
+      "id": "10",
+      "alergensText": "",
+      "state": "open",
+      "formType": "chine-form"
+    },
+    {
+      "alloTitle": "Allo taxi",
+      "alloDesc": "Besoin d'un taxi ? Atl'as vous emmène où vous le souhaitez",
+      "id": "12",
+      "alergensText": "",
+      "state": "open",
+      "formType": "taxi-form"
+    },
+    {
+      "alloTitle": "Allo sieste",
+      "alloDesc": " Un amphi trop long ou un TD trop chiant, ça endort ! Malheureusement l’IMT Atlantique ne pense pas à vous et ne vous permet pas de pouvoir vous endormir confortablement. Appelez nous et nous vous ramenons le nécessaire pour siester tout confort - A lesson that's too long or a TD that's too boring, that puts you to sleep! Unfortunately, IMT Atlantique doesn't think of you and doesn't allow you to fall asleep comfortably. Give us a call and we'll bring you everything you need for a comfortable night's sleep.",
+      "id": "13",
+      "alergensText": "",
+      "state": "open",
+      "formType": "sieste-form"
+    },
+    {
+      "alloTitle": "Allo dodo",
+      "alloDesc": "Vous vous sentez seul pour vous endormir ou tout simplement Morphée vous refuse à ses côtés ? Nous sommes prêts à vous accompagner dans le pays des rêves. Nous viendrons vous border et vous raconter une histoire pour vous aider à vous endormir - Feeling lonely falling asleep? We're ready to guide you into dreamland. We'll tuck you in and tell you a story to help you fall asleep. ",
+      "id": "14",
+      "alergensText": "",
+      "state": "open",
+      "formType": "dodo-form"
+    },
+    {
+      "alloTitle": "Allo opera",
+      "alloDesc": " Vous appréciez la musique et vous désirez la faire découvrir à vos amis ? Donnez-nous un titre de chanson, un numéro de chambre et une heure. Notre ménestrel viendra chanter cette douce mélodie là où vous l’aurez demandé. - Do you enjoy music and want to share it with your friends ? Give us a song title, a room number and a time. Our singer will come and sing that beautiful melody. ",
+      "id": "15",
+      "alergensText": "",
+      "state": "open",
+      "formType": "opera-form"
+    }
+]

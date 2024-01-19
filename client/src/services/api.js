@@ -18,5 +18,17 @@ export default class Api{
         .catch(error => this.handleError(error))
     }
 
+    static getListeAllos(idListe){
+        return fetch(Api.API_URL+'/allos?liste='+idListe)
+        .then(res => res.json())
+        .catch(error => this.handleError(error))
+    }
+
+    static getAllos(){
+        return fetch(Api.API_URL+'/allos')
+        .then(res => res.json())
+        .catch(error => this.handleError(error))
+    }
+
 
 }

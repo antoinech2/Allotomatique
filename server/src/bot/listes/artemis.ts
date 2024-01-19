@@ -16,7 +16,9 @@ export default class Artemis implements Liste{
         return AlloAvailability.AVAILABLE;
     }
 
-    commandAllo(id : number) : AlloCommandResponse{
+    getAllos(): any{}
+
+    commandAllo(id : string) : AlloCommandResponse{
         return AlloCommandResponse.SUCCESS;
     }
 }

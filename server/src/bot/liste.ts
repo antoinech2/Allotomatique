@@ -5,6 +5,7 @@ export interface Liste {
     name: string;
     type: string;
     
-    getAlloAvailability(id : number) : AlloAvailability;
-    commandAllo(id : number) : AlloCommandResponse;
+    getAllos(): any;
+    //getAlloAvailability(id : string) : AlloAvailability;
+    commandAllo(id : string) : AlloCommandResponse;
     }

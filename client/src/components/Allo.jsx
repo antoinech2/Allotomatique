@@ -45,9 +45,9 @@ export default function Allo({ id, value, listeId, listeName, showListeName = fa
                         <Box>{value.description}</Box>
                         {value?.command?.waiting > 1 ? <Box>{value?.command?.waiting} commandes en attente...</Box> : null}
                         {value?.command?.count > 1 ? <Box>{value?.command?.count} commandes en livraion...</Box> : null}
-                        <Box>{value.available === "true" ? <Chip icon={<CheckIcon />} label="Disponible" color="success"/> : null}
-                        {value.available === "false" ? <Chip icon={<CloseIcon />} label="Non disponible" color="error"/> : null}
-                        {(value.available !== "true" && value.available !== "false") ? <Chip icon={<QuestionMarkIcon />} label="Disponiblité inconnue"/> : null}
+                        <Box>{value.available === "available" ? <Chip icon={<CheckIcon />} label="Disponible" color="success"/> : null}
+                        {value.available === "unavailable" ? <Chip icon={<CloseIcon />} label="Non disponible" color="error"/> : null}
+                        {(value.available !== "available" && value.available !== "unavailable") ? <Chip icon={<QuestionMarkIcon />} label="Disponiblité inconnue"/> : null}
                         </Box>
                     </Stack>
                     <Stack spacing={1}>

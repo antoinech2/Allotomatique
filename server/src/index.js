@@ -4,10 +4,13 @@ const app = express()
 const port = process.env.PORT || 3001
 
 import CommandAllo from "./routes/command.js"
+import GetAllo from "./routes/getAllos.js"
+
 import CloseServer from "./routes/close.js"
 import Artemis from "./bot/listes/artemis.ts";
 import { scrapForm } from "./scrapper/formRetriever.js";
 import DataBase from "./database/init.js";
+import Atlas from "./bot/listes/atlas.ts";
 
 const database = await DataBase();
 
@@ -24,6 +27,7 @@ app.get('/', async (req, res) => {
 app.use('/allos', express.static('./../client/build'))
 
 CommandAllo(app)
+GetAllo(app)
 
 const server = app.listen(port, async () => {
   console.log('Application démarrée')  
@@ -39,6 +43,7 @@ app.use(({res}) => {
 
 let listes = {
   BDA1 : new Artemis(),
+  BDS1 : new Atlas()
 }
 
 //export default listes;
