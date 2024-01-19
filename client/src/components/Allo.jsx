@@ -1,15 +1,38 @@
-import { Card, CardHeader, CardContent, Stack, Chip, Box, TextField, CardActions, Button } from '@mui/material/';
+import { Card, CardHeader, CardContent, Stack, Chip, Box, TextField, CardActions, Button, Dialog as MuiDialog } from '@mui/material/';
 import Divider from '@mui/material-next/Divider';
 import {Check as CheckIcon, Close as CloseIcon, QuestionMark as QuestionMarkIcon} from '@mui/icons-material/';
 import ApiService from '../services/api';
+import {DialogTitle as MuiDialogTitle, DialogContent as MuiDialogContent } from '@mui/material/';
+import { useState } from 'react';
 
 
 export default function Allo({ id, value, listeId, listeName, showListeName = false}) {
+    const [state, setState] = useState(initialState);
 
-    function handleSubmit(e){
-        e.preventDefault()
-        ApiService.commandAllo(listeId, id)
+    function initialState() {
+        return {
+            message: '',
+        };
     }
+
+    async function handleSubmit(e) {
+        e.preventDefault();
+        var res = await ApiService.commandAllo(listeId, id);
+        if (res.result === 'success') {
+            // Afficher le popup
+            setMessage('La requête a été un succès !');
+        } else {
+            // Afficher une erreur
+            setMessage('La requête a échoué !');
+        }
+    }
+
+    const setMessage = (newMessage) => {
+        // Met à jour la valeur de l'état `message`
+        setState({
+          message: newMessage,
+        });
+      };
 
     return (
         <form onSubmit={handleSubmit}>
@@ -54,6 +77,12 @@ export default function Allo({ id, value, listeId, listeName, showListeName = fa
                     <Button variant="contained" type="submit" endIcon={<CheckIcon />}>
                     Commander
                     </Button>
+                    <MuiDialog open={state.message.length > 0} onClose={() => setMessage('')}>
+                        <MuiDialogTitle>Résultat de la requête</MuiDialogTitle>
+                        <MuiDialogContent>
+                            <p>{state.message}</p>
+                        </MuiDialogContent>
+                    </MuiDialog>
             </CardActions>
         </Card>
         </form>
