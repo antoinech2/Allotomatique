@@ -7,8 +7,6 @@ import AllAllo from './pages/AllAllo';
 
 import listes from './../data/listes.json'
 
-import { useState } from "react";
-
 function App() {
 
     const [visible, setVisible] = useState(true);
