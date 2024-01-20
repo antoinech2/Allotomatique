@@ -12,13 +12,15 @@ export default class Artemis implements Liste{
         this.type = "BDA";
     }
 
-    getAlloAvailability(id: number): AlloAvailability {
-        return AlloAvailability.AVAILABLE;
+    getAlloAvailability(id: string): AlloAvailability {
+        return this.getAllos().then((res) => {return res.filter((allo : any) => allo.id === id)[0].available;})
     }
 
-    getAllos(): any{}
+    getAllos(): any{
+        return []
+    }
 
-    commandAllo(id : string) : AlloCommandResponse{
-        return AlloCommandResponse.SUCCESS;
+    commandAllo(id : string) : Promise<AlloCommandResponse>{
+        return new Promise((resolve, rej) => {resolve(AlloCommandResponse.UNKNOWN)});
     }
 }

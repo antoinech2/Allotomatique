@@ -12,6 +12,9 @@ import { scrapForm } from "./scrapper/formRetriever.js";
 import DataBase from "./database/init.js";
 import Atlas from "./bot/listes/atlas.ts";
 
+import  { processQueue } from "./bot/main.js";
+import Imtpulsion from "./bot/listes/imtpulsion.ts";
+
 const database = await DataBase();
 
 app.use(express.json())
@@ -26,7 +29,7 @@ app.get('/', async (req, res) => {
 
 app.use('/allos', express.static('./../client/build'))
 
-CommandAllo(app)
+CommandAllo(app, database)
 GetAllo(app)
 
 const server = app.listen(port, async () => {
@@ -43,8 +46,11 @@ app.use(({res}) => {
 
 let listes = {
   BDA1 : new Artemis(),
-  BDS1 : new Atlas()
+  BDS1 : new Atlas(),
+  BDE2 : new Imtpulsion()
 }
+
+setInterval(() => {processQueue(listes, database)},10000)
 
 //export default listes;
 

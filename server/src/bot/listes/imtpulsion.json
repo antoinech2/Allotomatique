@@ -1,0 +1,120 @@
+[
+    {
+        "id" : "rice",
+        "name" : "Bol de riz",
+        "webhook" : "https://discord.com/api/webhooks/1194079838403842118/ww_3HfPGrJBhPpZ58klRI6cvH1Qs9s3BgnVD8JQcuLXqfQGrv9snZX9KhspBbQNRQ3nu"
+    },
+    {
+        "id" : "hotDog",
+        "name" : "Hot Dog",
+        "webhook" : "https://discord.com/api/webhooks/1195032986786205766/wq6W1HQU99wQmyZqFQtdjXjnfn8zI5mICwgqFEQ2p2HA2uU1nLKYVkooVo4Mno8pqjgB"
+    },
+    {
+        "id" : "burrito",
+        "name" : "Burrito",
+        "webhook" : "https://discord.com/api/webhooks/1195033083930480671/qWEy2qaWz_0Q7E3K1i9RZfzxnme6NLCTG_EGXoAVqVSxT7f5TuzDx_XPb8v_dp1fpREl"
+
+    },
+    {
+        "id" : "crepesucre",
+        "name" : "Crèpe au sucre",
+        "webhook" : "https://discord.com/api/webhooks/1197929932806967367/HZnPuhrXmS-OL-1iowSSiYDjdUqKo9wPHi0HdHP0-c46cjhytvOpMLjcmN8SuY2KNHuy"
+
+    },
+    {
+        "id" : "crepechoco",
+        "name" : "Crèpe au chocolat",
+        "webhook" : "https://discord.com/api/webhooks/1197929930269396992/YfGvGH1RJazAf2wpCxP4jiQUbeU3PeEltjrUt9_1Le93BlxCcL8mI-O3aGXzABiq3BrF"
+
+    },
+    {
+        "id" : "crepenature",
+        "name" : "Crèpe nature",
+        "webhook" : "https://discord.com/api/webhooks/1197929910543593552/HGBFeUThz4g5dlJiGX9BjS1DJNpxTP6NsuFzS6L-yP8pvaFBA9rSw1tBGh5-MlYjOSlU"
+
+    },
+    {
+        "id" : "briochechoco",
+        "name" : "Brioche au chocolat",
+        "webhook" : "https://discord.com/api/webhooks/1197634969992962121/2r6AAnvoE9Ee9g9LxvqaPrErMR3f0d5qXtzVTzWTPq_55uXb5Ff3xBh34QXAyGIBti2q"
+
+    },
+    {
+        "id" : "painLait",
+        "name" : "Pain au lait",
+        "webhook" : "https://discord.com/api/webhooks/1197634672931373157/bNLl6lVFsDN4KqnxCntD5MexZJt2Cq_NwnFPrHWfibOJm6AJYMFRAJJqelPVJfYGjqEM"
+
+    },
+    {
+        "id" : "briocheconfiture",
+        "name" : "Brioche à la confiture",
+        "webhook" : "https://discord.com/api/webhooks/1197634775264022619/mps7DOjNI3XBqJv20wV1uJx7IHhYg6d3jOX_vwpMiHhG4Ee-paGGvkkF21jp1EiJJi-r"
+
+    },
+    {
+        "id" : "lait",
+        "name" : "Lait",
+        "webhook" : "https://discord.com/api/webhooks/1197634967333777599/4xnQ-9ryRAh0dxd_ck3QbjguBx8nGHxzzB7B0Y7Cx-SFT6zUfaoNvnoHX5wRidaq-drz"
+
+    },
+    {
+        "id" : "cafe",
+        "name" : "Café",
+        "webhook" : "https://discord.com/api/webhooks/1197634963428868247/ldw1ZckRyWXdZcepZA0h9TXDnrx3mwT3M8zex27g5qluqg4Yq8higAyn2QUpLkzEv-1l"
+
+    },
+    {
+        "id" : "jusPomme",
+        "name" : "Jus de pomme",
+        "webhook" : "https://discord.com/api/webhooks/1197634956655083580/0dlZexmI02kJjEuNpnnx0DjeJvP2fxW4osCjv9rJ2xBf4tMsWsIX7IZIIUHLpcarq8U_"
+
+    },
+    {
+        "id" : "jusOrange",
+        "name" : "Jus d'orange",
+        "webhook" : "https://discord.com/api/webhooks/1197634873192611870/0HKiKe6DuecMkF8MTl0k5AvpmRI8qp8bQLigFvkUbcCRfmWtCuLhlLhnjkB-JnXAC29b"
+
+    },
+    {
+        "id" : "multifruit",
+        "name" : "Jus multifruit",
+        "webhook" : "https://discord.com/api/webhooks/1197635466372063383/XBjQCLWQC22VVRFtTJGffqnhB3EIWsEUClgLOtcpIYbvGn8m-NludbTlrKk6rQeU6P3I"
+
+    },
+    {
+        "id" : "cocktail",
+        "name" : "Cocktail",
+        "webhook" : "https://discord.com/api/webhooks/1197635612472262666/pb4LdzcOmj_ETdVKlwfSe3rdpCK_GUP4ZYuJsozB-7JdbRBuMKJ4pO_WsN-gc_aEn9Fv"
+
+    },
+    {
+        "id" : "shot",
+        "name" : "Shot",
+        "webhook" : "https://discord.com/api/webhooks/1197635618621104189/JVytTJdfhq4q8MceW0fIGt0UIwRIcpYrjOokw4M2MyIPhl37pNQU-dYjexaWcjFgOoYE"
+
+    },
+    {
+        "id" : "biere",
+        "name" : "Bière",
+        "webhook" : "https://discord.com/api/webhooks/1197635616624607382/TBCHJIWTcS470SOkHNru1F-lVA0AKghVgE7NsEKZMTJ97kIngslGw4kMRX0q0UQ9XRzh"
+
+    },
+    {
+        "id" : "mario",
+        "name" : "Mario",
+        "webhook" : "https://discord.com/api/webhooks/1197614537935962202/mrNUzMKiyhtjqPd55afoOHqWVYhcZO81M29O93ESxfcPuGr4XpPCP6lnU7IhW1GTP3Ik"
+
+    },
+    {
+        "id" : "ongles",
+        "name" : "Ongles",
+        "webhook" : "https://discord.com/api/webhooks/1197622053302456381/jcj2qFMziW7hH3GhNOHIp47QTFCItONCFh0jIejTaCXeSxdceCxKdqCDHQye6fTqCEZH"
+
+    },
+    {
+        "id" : "dodo",
+        "name" : "Dodo",
+        "webhook" : "https://discord.com/api/webhooks/1197622233162592446/d-IUXTBw_ugI2MToCYYMwTqUzjQ9JkiUhL1fQKKgfkQhVV-oXE5Z4qb_sPRnZ_eChZKs"
+
+    }
+]

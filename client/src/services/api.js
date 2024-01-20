@@ -6,13 +6,13 @@ export default class Api{
         console.error(`Error while communicating with API : ${error}`);
     }
 
-    static commandAllo(idListe, idAllo){
+    static commandAllo(listeId, alloId, name, adress, phone, infos, quantity){
         return fetch(Api.API_URL+'/command', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify({idListe, idAllo})
+            body: JSON.stringify({listeId, alloId, name, adress, infos, phone, quantity})
         })
         .then(res => res.json())
         .catch(error => this.handleError(error))

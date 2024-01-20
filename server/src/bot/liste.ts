@@ -6,6 +6,6 @@ export interface Liste {
     type: string;
     
     getAllos(): any;
-    //getAlloAvailability(id : string) : AlloAvailability;
-    commandAllo(id : string) : AlloCommandResponse;
+    getAlloAvailability(id : string) : AlloAvailability;
+    commandAllo(id : string, name : string, adress : string, phone : string, infos : string) : Promise<AlloCommandResponse>;
     }

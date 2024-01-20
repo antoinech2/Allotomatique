@@ -6,7 +6,7 @@ import {DialogTitle as MuiDialogTitle, DialogContent as MuiDialogContent } from 
 import { useState } from 'react';
 
 
-export default function Allo({ id, value, listeId, listeName, showListeName = false}) {
+export default function Allo({ id, value, listeId, listeName, user, showListeName = false}) {
     const [state, setState] = useState(initialState);
 
     function initialState() {
@@ -17,13 +17,13 @@ export default function Allo({ id, value, listeId, listeName, showListeName = fa
 
     async function handleSubmit(e) {
         e.preventDefault();
-        var res = await ApiService.commandAllo(listeId, id);
+        var res = await ApiService.commandAllo(listeId, id, user.name, user.adresse, user.phone, user.infos, e.target.command_count.value);
         if (res.result === 'success') {
             // Afficher le popup
-            setMessage('La requête a été un succès !');
+            setMessage('Succès ! Commandes mises en file d\'attente');
         } else {
             // Afficher une erreur
-            setMessage('La requête a échoué !');
+            setMessage('La requête a échoué ! Détails : ' + res.error);
         }
     }
 

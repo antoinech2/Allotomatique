@@ -5,7 +5,7 @@ import { useState, useEffect } from 'react';
 //import allos from './../../data/allotest.json'
 import ApiService from '../services/api.js'
 
-export default function Liste({listeId}){
+export default function Liste({listeId, user}){
     const [allos, setAllos] = useState([]);
 
     useEffect(() => {
@@ -17,10 +17,10 @@ export default function Liste({listeId}){
                 setAllos([])
             }
             });
-    }, []);
+    }, [listeId]);
 
     return(
     <Stack spacing={2}>
-        {allos.map((allo, index) => (<Allo key={index} id={allo.id} value={allo} listeId={listeId}/>))}
+        {allos.map((allo, index) => (<Allo key={index} id={allo.id} value={allo} listeId={listeId} user={user}/>))}
     </Stack>)
 }

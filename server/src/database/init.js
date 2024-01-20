@@ -43,8 +43,12 @@ export default async function init(){
             primaryKey: true,
             autoIncrement: true
         },
+        listeId : {
+          type: Sequelize.STRING,
+          allowNull: false
+        },
         alloId: {
-          type: Sequelize.INTEGER,
+          type: Sequelize.STRING,
           allowNull: false
         },
         client : {
@@ -55,12 +59,16 @@ export default async function init(){
           type: Sequelize.STRING,
           allowNull: true
         },
+        phone : {
+          type: Sequelize.STRING,
+          allowNull: true
+        },
         infos : {
             type: Sequelize.STRING,
             allowNull: true
           },
         status : {
-          type: Sequelize.ENUM('PENDING', 'WAITING', 'DELIVERED', 'CANCELED'),
+          type: Sequelize.ENUM('PENDING', 'WAITING', 'WAITING_NOT_CONFIRMED', 'DELIVERED', 'CANCELED'),
           allowNull: false,
         },
         date_demande : {
@@ -79,8 +87,8 @@ export default async function init(){
 
       }, {});
 
-      await AlloDB.sync({ force: true });
-      await CommandeDB.sync({ force: true });
+      //await AlloDB.sync({ force: true });
+      //await CommandeDB.sync({ force: true });
 
     return {connection : sequelize, allo : AlloDB, commande : CommandeDB};
 }

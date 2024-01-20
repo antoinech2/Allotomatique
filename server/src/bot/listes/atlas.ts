@@ -15,9 +15,9 @@ export default class Atlas implements Liste{
         this.type = "BDS";
     }
 
-    // getAlloAvailability(id: number): AlloAvailability {
-    //     return AlloAvailability.AVAILABLE;
-    // }
+    getAlloAvailability(id: string): AlloAvailability {
+        return this.getAllos().then((res) => {return res.filter((allo : any) => allo.id === id)[0].available;})
+    }
 
     getAllos(): any{
         return fetch("https://atlapi.atl-as.fr/rooter.php/state/list")
@@ -32,7 +32,7 @@ export default class Atlas implements Liste{
                         if (allo.state === 1) {available = AlloAvailability.AVAILABLE}
                         else if (allo.state === 0) {available = AlloAvailability.UNAVAILABLE};
                         result.push({
-                            id: this.id+allo.alloName,
+                            id: allo.alloName,
                             name: data.alloTitle,
                             available,
                             description : data.alloDesc + data.alergensText
@@ -45,7 +45,7 @@ export default class Atlas implements Liste{
         })
     }
 
-    commandAllo(id : string) : AlloCommandResponse{
-        return AlloCommandResponse.SUCCESS;
+    commandAllo(id : string, name : string, adress : string, phone : string, infos : string) : Promise<AlloCommandResponse>{
+        return new Promise((resolve, rej) => {resolve(AlloCommandResponse.UNKNOWN)});
     }
 }
