@@ -1,0 +1,128 @@
+[
+    {
+        "id": "pizza",
+        "webhook": "https://discord.com/api/webhooks/1197888803428388975/kMtSXqtG1Cok8WsaJptwnQEPWcNBQ8en1cmN0oyH8EWTdPHmKzaqmYQvXJAv4DAbO_XH",
+        "color": ["162848", "14515651"],
+        "details": ["**Pizza:** Margherita", "**Pizza:** Reine"]
+    },
+    {
+        "id": "bricks",
+        "webhook": "https://discord.com/api/webhooks/1197888992310464512/2k98RgwHG_Y1fQtLszoihBXnX98iRk9ZkDa8thqNv1XzaPfZMSNVHTyhwP0xAvpHxSVE",
+        "color": ["14515651", "162848"],
+        "details": ["**Bricks:** Viande", "**Bricks:** Végé"]
+    },
+    {
+        "id": "katsu",
+        "webhook": "https://discord.com/api/webhooks/1197888992310464512/2k98RgwHG_Y1fQtLszoihBXnX98iRk9ZkDa8thqNv1XzaPfZMSNVHTyhwP0xAvpHxSVE",
+        "color": ["15105570"],
+        "details": ["**Curry Katsu** "]
+    },
+    {
+        "id": "bar",
+        "webhook": "https://discord.com/api/webhooks/1197889145360621579/kWJ_Ung36gwjdKFp5W0d2A30wyArAimeAcQTOTrfz-v5nPWG1klnL6aCZx5H6KWJePlL",
+        "color": ["16749609"],
+        "details": ["**C'est du jus** "]
+    },
+    {
+        "id": "five",
+        "webhook": "https://discord.com/api/webhooks/1197889145360621579/kWJ_Ung36gwjdKFp5W0d2A30wyArAimeAcQTOTrfz-v5nPWG1klnL6aCZx5H6KWJePlL",
+        "color": ["2067276"],
+        "details": ["**À BOIRE** "]
+    },
+    {
+        "id": "proteimt",
+        "webhook": "https://discord.com/api/webhooks/1197889323270426634/r9BL46rd16X7BecY7ynkpKzizu4RCi5jMcF7c4N5OJb6FBLxPaJb0udo44_ART8-eELn",
+        "color": ["10197915"],
+        "details": ["**Proté'Imt** "]
+    },
+    {
+        "id": "squat",
+        "webhook": "https://discord.com/api/webhooks/1197889470503067760/-BytHYgeSi5j0CA3Xtq9iMhSiuHUIYXqcz5jdiORq8itYC1y-orM7K5k8kSzDYkppC1d",
+        "color": ["13632027"],
+        "details": ["**Réservation Convi !** "]
+    },
+    {
+        "id": "gaufres",
+        "webhook": "https://discord.com/api/webhooks/1197889628171157554/pMdtelD6W-b0ApF670tongFHjtrgboEMJluYbYs-W13lxJ3gRxlurPm7H5DyjLom8A_A",
+        "color": ["6630951", "12745742", "10224669"],
+        "details": ["**Topping choisi:** Nutella", "**Topping choisi:** Chocolat praliné", "**Topping choisi:** Chantilly & fruits rouges"]
+    },
+    {
+        "id": "ptitdej",
+        "webhook": "https://discord.com/api/webhooks/1197889759784218705/Y64kSwGhoMBAyQPs2fha59bJN7eEhDdMt1SEuAuZkxrKJ9h7BXf7Hj7b2rmX7UtRp0At",
+        "color": ["15158332"],
+        "details": ["**P'tit Déj**"]
+    },
+    {
+        "id": "crepes",
+        "webhook": "https://discord.com/api/webhooks/1197889759784218705/Y64kSwGhoMBAyQPs2fha59bJN7eEhDdMt1SEuAuZkxrKJ9h7BXf7Hj7b2rmX7UtRp0At",
+        "color": ["6630951", "13730569"],
+        "details": ["**Crêpe** Nutella", "**Crêpe** Caramel Chantilly"]
+    },
+    {
+        "id": "cafe",
+        "webhook": "https://discord.com/api/webhooks/1197889759784218705/Y64kSwGhoMBAyQPs2fha59bJN7eEhDdMt1SEuAuZkxrKJ9h7BXf7Hj7b2rmX7UtRp0At",
+        "color": ["9131818","9131818","9131818","9131818","9131818"],
+        "details": ["**Café: ** Café Latte", "**Café: ** Mocha", "**Café: ** Caramel Macchiato", "**Café: ** Café glacé", "**Café: ** Frappuccino"]
+    },
+    {
+        "id": "briocheperdue",
+        "webhook": "https://discord.com/api/webhooks/1197889628171157554/pMdtelD6W-b0ApF670tongFHjtrgboEMJluYbYs-W13lxJ3gRxlurPm7H5DyjLom8A_A",
+        "color": "16368188",
+        "details": ["**Brioche Perdue**"]
+    },
+    {
+        "id": "coiffure",
+        "webhook": "https://discord.com/api/webhooks/1197889971042910369/TJF1b2EZZp5CjwCbHoXDOGlesIQ_BOQUYW6h9Uov6vDBYp91lDb7XIjxMPdRSXVpbejU",
+        "color": ["1743676"],
+        "details": ["**Coiffure**"]
+    },
+    {
+        "id": "raclette",
+        "webhook": "https://discord.com/api/webhooks/1197890135430279258/d8QEMXT44KiRhqLkWhp8VV3muwEMlRRnh17mNeMQwCcn_yrIyD41Ont6IGOy790p37M-",
+        "color": ["14933125"],
+        "details": ["**Participation au tirage au sort de Raclette du **"]
+    },
+    {
+        "id": "tacos",
+        "webhook": "https://discord.com/api/webhooks/1197890297770815508/QppbwVQnB73iCrIZlp9BoY2CFY1mwv-ZRVOlccAFXEsXfdRpi8xjB_U2WAiiX7iZrXGV",
+        "color": ["10038562"],
+        "details": [""]
+    },
+    {
+        "id": "insomnie",
+        "webhook": "https://discord.com/api/webhooks/1197890554609021039/MjgHevceBRn3D3fyfTKJmIOpOxP_6jb1TiQwgdWQaZCkL6_xswxvHnsKmCflHXfgY_J7",
+        "color": ["7419521"],
+        "details": ["**Alerte insomnie**"]
+    },
+    {
+        "id": "fusee",
+        "webhook": "https://discord.com/api/webhooks/1197890707432681583/OjT0XbI2J34qUAxYjefqHP9oF4QrNG1VHsWuCveIjiaUIi7GorD7EeAD0bW1sk1TfnRe",
+        "color": ["4289797"],
+        "details": ["**Décollage pour la Lune**"]
+    },
+    {
+        "id": "coach",
+        "webhook": "https://discord.com/api/webhooks/1197890820670488627/b_4XFCgf-aozHwkttGpub_5JGpLhJH4eh2dLh3QeBqcG_lYxp75HB3ymjViel9zrBJeY",
+        "color": ["15277667"],
+        "details": ["**Coach Love requis**"]
+    },
+    {
+        "id": "boc",
+        "webhook": "https://discord.com/api/webhooks/1197890943911731220/2YtdAY6IEEmI9RWgAwjldmcW5a_xEUXq6_4dQBiTizHu2VT8ka3fnDC1gPFLO_jX2Hum",
+        "color": ["10240691"],
+        "details": ["**BoC**"]
+    },
+    {
+        "id": "frites",
+        "webhook": "https://discord.com/api/webhooks/1197891084123119698/yjSm-SttPN0hfjmffzAimSNPl3lx7pPG_tlLzrc0M_i0ywPfJVEtkFZGm3bzwITRkjvj",
+        "color": ["16265519"],
+        "details": ["**Frites**"]
+    },
+    {
+        "id": "tapas",
+        "webhook": "https://discord.com/api/webhooks/1197891235164205076/dg-pgU4hO-k7cZHJsP8pai_BYvWm3wh9uGiQiGaXlCaDYgvLY4lBwPpRLcfRpo8XR0Bk",
+        "color": ["16265519"],
+        "details": ["**JE VEUX DES TAPAS**"]
+    }
+]

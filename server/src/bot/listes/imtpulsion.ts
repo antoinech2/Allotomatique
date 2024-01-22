@@ -18,31 +18,38 @@ export default class Imtpulsion implements Liste{
 
 
     getAllos(): any{
-        return fetch("https://dashing-shortbread-d9cbec.netlify.app/")
-        .then(response => response.text()) 
-	    .catch(err => console.error(err))
-        .then((html : any) => {
-            let result = []
-            let products = xpath.fromPageSource(html).findElements("//div[contains(@class, 'product')]")
-            //products.concat(xpath.fromPageSource(html).findElements("//div[contains(@class, 'commande')]"))
-            products.forEach((product : any, index : number) => {
-                let status = xpath.fromNode(product).findElement("//div[contains(@id, 'continue-button')]")
-                let available = AlloAvailability.UNKNOWN;
-                if (status.getText() === "Commander !") {available = AlloAvailability.AVAILABLE}
-                else if (status.getText() === "Indisponible") {available = AlloAvailability.UNAVAILABLE};
-                result.push({id : DataImtpulsion[index].id, name : DataImtpulsion[index].name, available, description : ""})
+        try {
+            return fetch("https://dashing-shortbread-d9cbec.netlify.app/")
+            .then(response => response.text()) 
+            .catch(err => {console.error(err); return [];})
+            .then((html : any) => {
+                let result = []
+                let products = xpath.fromPageSource(html).findElements("//div[contains(@class, 'product')]")
+                //products.concat(xpath.fromPageSource(html).findElements("//div[contains(@class, 'commande')]"))
+                products.forEach((product : any, index : number) => {
+                    let status = xpath.fromNode(product).findElement("//div[contains(@id, 'continue-button')]")
+                    let available = AlloAvailability.UNKNOWN;
+                    if (status.getText() === "Commander !") {available = AlloAvailability.AVAILABLE}
+                    else if (status.getText() === "Indisponible") {available = AlloAvailability.UNAVAILABLE};
+                    result.push({id : DataImtpulsion[index].id, name : DataImtpulsion[index].name, available, description : ""})
+                })
+                return result;
             })
-            return result;
-        })
+            } catch (error) {
+            console.error("Erreur lors de la récupération des allos" + this.name + " : " + error)
+            return []
+        }
     }
 
     getAlloAvailability(id: string): AlloAvailability {
-        return this.getAllos().then((res) => {return res.filter((allo : any) => allo.id === id)[0].available;})
+        try {
+            return this.getAllos().then((res) => {return res.filter((allo : any) => allo.id === id)[0].available;})
+        } catch (error) {
+            return AlloAvailability.UNKNOWN;
+        }
     }
 
     async commandAllo(id : string, name : string, adress : string, phone : string, infos : string) : Promise<AlloCommandResponse>{
-        const available = await this.getAlloAvailability(id);
-        if (available === AlloAvailability.AVAILABLE) {
                 const message = `${adress}\n ${name}\n ${id}\n ---------------------------------------`;
                 return fetch(DataImtpulsion.filter((allo : any) => allo.id === id)[0].webhook, {
                         method: "POST",
@@ -54,8 +61,5 @@ export default class Imtpulsion implements Liste{
                     })
                     .catch((error) => {console.error(error); return AlloCommandResponse.FAILED;});
         }
-        else {
-                return AlloCommandResponse.NOT_AVAILABLE;
-        }
-    }
+
 }

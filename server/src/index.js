@@ -12,10 +12,13 @@ import { scrapForm } from "./scrapper/formRetriever.js";
 import DataBase from "./database/init.js";
 import Atlas from "./bot/listes/atlas.ts";
 
-import  { processQueue } from "./bot/main.js";
+import  { processQueue, refreshCache } from "./bot/main.js";
 import Imtpulsion from "./bot/listes/imtpulsion.ts";
+import Imtsomnia from "./bot/listes/imtsomnia.ts";
 
 const database = await DataBase();
+
+export var cache = {}
 
 app.use(express.json())
 .use(cors())
@@ -47,10 +50,14 @@ app.use(({res}) => {
 let listes = {
   BDA1 : new Artemis(),
   BDS1 : new Atlas(),
+  BDE1 : new Imtsomnia(),
   BDE2 : new Imtpulsion()
 }
 
-setInterval(() => {processQueue(listes, database)},10000)
+setInterval(async () => {
+  cache = await refreshCache(listes)
+  processQueue(listes, database, cache)
+},10000)
 
 //export default listes;
 

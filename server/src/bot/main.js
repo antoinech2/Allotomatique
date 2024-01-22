@@ -1,8 +1,25 @@
-export async function processQueue(listes, db) {
+import { Sequelize } from "sequelize";
+
+export async function refreshCache(listes){
+    console.log("Refreshing cache...")
+    let result = {}
     for (let listeId in listes) {
         let liste = listes[listeId];
-        db.commande.findAll({limit : 1, where : {listeId : liste.id, status : "PENDING"}}).then(async (commandes) => {
+        result[listeId] = await liste.getAllos();
+    }
+    return result;
+}
+
+
+export async function processQueue(listes, db, cache) {
+    for (let listeId in listes) {
+        let liste = listes[listeId];
+        db.commande.findAll({where : {listeId : liste.id, status : "PENDING"}}).then(async (commandes) => {//order: Sequelize.literal('random()') //attributes : [[Sequelize.fn('DISTINCT', Sequelize.col('alloId')) ,'alloId']],
+            console.log(`Tentative de ${commandes.length} commandes pour la liste ${liste.name}...`)
+            Loopcommandes:
             for (const commande of commandes) {
+                if (cache[listeId].find(allo => allo.id == commande.alloId)?.available == "available"){
+                    console.log(`Commande ${commande.id} (${liste.name} ${commande.alloId}) en cours... Allo disponible`)
                 const result = await liste.commandAllo(commande.alloId, commande.client, commande.adress, commande.phone, commande.infos);
                 console.log(result)
                 switch (result) {
@@ -10,6 +27,7 @@ export async function processQueue(listes, db) {
                         console.log(`Commande ${commande.id} (${liste.name} ${commande.alloId}) commandée avec succès`)
                         commande.status = "WAITING";
                         await commande.save();
+                        break Loopcommandes;
                         break;
                     case 'success_not_confirmed':
                         console.log(`Commande ${commande.id} (${liste.name} ${commande.alloId}) commandée sans confirmation`)
@@ -27,8 +45,9 @@ export async function processQueue(listes, db) {
                         break;                         
                     default:
                         break;
-                }
+                }}
             }
         })
     }
+    console.log("Fin...")
 }

@@ -22,7 +22,6 @@ function App() {
         }
     };
 
-    const [user, setUser] = useState({name : "Clément", adresse: "R432", phone : "", infos: ""});
 
   return (
         <Stack>
@@ -44,15 +43,19 @@ function App() {
     );
 }
 
-const Page = () => (
+const Page = () => {
+
+    const [user, setUser] = useState({name : "Clément", adresse: "R432", phone : "", infos: ""});
+
+    return(
     <BrowserRouter>
     <Routes>
-      <Route path="/" element={<Layout />}>
-          {listes.map((liste) => (<Route path={"liste"+liste.id} element={<Liste listeId={liste.id} />} />))}
+      <Route path="/" element={<Layout defineUser={setUser} user={user}/>}>
+          {listes.map((liste) => (<Route path={"liste"+liste.id} element={<Liste listeId={liste.id} user={user}/>} />))}
           <Route path={"/allAllo"} element={<AllAllo/>}/>
       </Route>
     </Routes>
-    </BrowserRouter>
-);
+    </BrowserRouter>)
+};
 
 export default App;

@@ -2,8 +2,9 @@ export default (app, db) => {
   app.post('/api/command', async (req, res) => {
     try {
       const names = req.body.name.split(",");
+      const adresses = req.body.adress.split(",");
       for(let i = 0; i < req.body.quantity; i++){
-        const commande = db.commande.build({listeId : req.body.listeId, alloId : req.body.alloId, client : names[i % names.length], adress : req.body.adress, infos : req.body.infos, phone : req.body.phone, status : "PENDING" });
+        const commande = db.commande.build({listeId : req.body.listeId, alloId : req.body.alloId, client : names[i % names.length], adress : adresses[i% adresses.length], infos : req.body.infos, phone : req.body.phone, status : "PENDING" });
         await commande.save();
       }
       res.json({ result: "success" });
