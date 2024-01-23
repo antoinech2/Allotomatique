@@ -31,6 +31,12 @@ export default class Artemis implements Liste{
             .catch(err => {console.error(err); return [];})
             .then((html : any) => {
                 let result = []
+                let globalAvailability
+                try {
+                    globalAvailability = xpath.fromPageSource(html).findElement("//div[contains(@class, 'UatU5d')]").getText()
+                } catch (error) {
+                    globalAvailability = ""
+                }
                 let script = xpath.fromPageSource(html).findElements("//script")
                 try {
                     const rawdata = script[0].getText().split(" = ")[1]
@@ -43,6 +49,7 @@ export default class Artemis implements Liste{
                         let available = AlloAvailability.UNKNOWN;
                         if (commandCount[allo] < limit[allo]) {available = AlloAvailability.AVAILABLE}
                         else if (commandCount[allo] >= limit[allo]) {available = AlloAvailability.UNAVAILABLE};
+                        if (globalAvailability === "Le shotgun est fermé !") {available = AlloAvailability.UNAVAILABLE};
                         result.push({
                             id: allo,
                             name: allo,
@@ -75,6 +82,7 @@ export default class Artemis implements Liste{
 
     async commandAllo(id : string, name : string, adress : string, phone : string, infos : string) : Promise<AlloCommandResponse>{
                 const alloData = DataArtemis.filter((allo : any) => allo.id === id)[0]
+                if (!alloData) return AlloCommandResponse.FAILED;
                 if (alloData.page === "") return AlloCommandResponse.FAILED;
                 let response : any = [[[null,1788862188,[name],0],[null,1234006518,[phone],0],[null,488687469,[adress],0],[null,322877549,[id],0]]]
                 if (alloData.fields){

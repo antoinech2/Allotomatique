@@ -1,11 +1,15 @@
 import { Sequelize } from "sequelize";
 
-export async function refreshCache(listes){
+export async function refreshCache(listes, db){
     console.log("Refreshing cache...")
     let result = {}
     for (let listeId in listes) {
         let liste = listes[listeId];
+        console.log(`Liste ${liste.name}...`)
         result[listeId] = await liste.getAllos();
+        for (let allo of result[listeId]){
+            await db.commande.count({where : {listeId : liste.id, alloId : allo.id,status : "PENDING"}}).then((count) => {result[listeId].find(curallo => curallo.id == allo.id).pending = count});
+        }
     }
     return result;
 }

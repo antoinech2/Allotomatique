@@ -53,9 +53,11 @@ let listes = {
   BDE1 : new Imtsomnia(),
   BDE2 : new Imtpulsion()
 }
-
+cache = await refreshCache(listes, database)
+processQueue(listes, database, cache)
 setInterval(async () => {
-  cache = await refreshCache(listes)
+  console.log(new Date(Date.now()).toLocaleString())
+  cache = await refreshCache(listes, database)
   processQueue(listes, database, cache)
 },10000)
 

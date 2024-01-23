@@ -43,8 +43,8 @@ export default function Allo({ id, value, listeId, listeName, user, showListeNam
                 <Stack direction="row" spacing={5} mb={2} display="flex" sx={{ maxWidth: '75%'}} divider={<Divider orientation="vertical" flexItem />}>
                     <Stack spacing={1.5}>
                         <Box>{value.description}</Box>
-                        {value?.command?.waiting > 1 ? <Box>{value?.command?.waiting} commandes en attente...</Box> : null}
-                        {value?.command?.count > 1 ? <Box>{value?.command?.count} commandes en livraion...</Box> : null}
+                        {value?.pending > 1 ? <Box>{value?.pending} commandes en attente...</Box> : null}
+                        {value?.waiting > 1 ? <Box>{value?.waiting} commandes en livraion...</Box> : null}
                         <Box>{value.available === "available" ? <Chip icon={<CheckIcon />} label="Disponible" color="success"/> : null}
                         {value.available === "unavailable" ? <Chip icon={<CloseIcon />} label="Non disponible" color="error"/> : null}
                         {(value.available !== "available" && value.available !== "unavailable") ? <Chip icon={<QuestionMarkIcon />} label="Disponiblité inconnue"/> : null}

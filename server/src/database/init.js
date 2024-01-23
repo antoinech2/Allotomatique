@@ -3,7 +3,8 @@ import Sequelize from 'sequelize';
 export default async function init(){
     const sequelize = new Sequelize({
         dialect: 'sqlite',
-        storage: 'data/database.sqlite'
+        storage: 'data/database.sqlite',
+        logging: false
       });
     
     try {

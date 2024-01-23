@@ -45,14 +45,14 @@ function App() {
 
 const Page = () => {
 
-    const [user, setUser] = useState({name : "Clément", adresse: "R432", phone : "", infos: ""});
+    const [user, setUser] = useState({name : "", adresse: "", phone : "", infos: ""});
 
     return(
     <BrowserRouter>
     <Routes>
       <Route path="/" element={<Layout defineUser={setUser} user={user}/>}>
           {listes.map((liste) => (<Route path={"liste"+liste.id} element={<Liste listeId={liste.id} user={user}/>} />))}
-          <Route path={"/allAllo"} element={<AllAllo/>}/>
+          <Route path={"/allAllo"} element={<AllAllo user={user}/>}/>
       </Route>
     </Routes>
     </BrowserRouter>)

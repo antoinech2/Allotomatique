@@ -8,7 +8,7 @@ import ApiService from '../services/api.js'
 export default function Liste({listeId, user}){
     const [allos, setAllos] = useState([]);
 
-    useEffect(() => {
+    function refreshAllos(){
         ApiService.getListeAllos(listeId).then((result) => {
             if (result.result){
                 setAllos(result.result[listeId])
@@ -17,6 +17,15 @@ export default function Liste({listeId, user}){
                 setAllos([])
             }
             });
+    }
+
+    useEffect(() => {
+        refreshAllos()
+        const interval = setInterval(() => {
+            refreshAllos()
+          }, 10000);
+        return () => clearInterval(interval);
+        
     }, [listeId]);
 
     return(

@@ -5,12 +5,11 @@ import listes from './../../data/listes.json'
 import { useState, useEffect } from 'react';
 import ApiService from '../services/api.js'
 
-export default function AllAllo() {
+export default function AllAllo({user}) {
     const [allos, setAllos] = useState([]);
 
-    useEffect(() => {
+    function refreshAllos(){
         ApiService.getAllos().then((result) => {
-            console.log(result)
             if (result.result){
                 setAllos(result.result)
             }
@@ -18,6 +17,15 @@ export default function AllAllo() {
                 setAllos([])
             }
             });
+    }
+
+    useEffect(() => {
+        refreshAllos()
+        const interval = setInterval(() => {
+            refreshAllos()
+          }, 10000);
+        return () => clearInterval(interval);
+        
     }, []);
 
     return (
@@ -32,6 +40,7 @@ export default function AllAllo() {
                         listeName={liste.name}
                         showListeName={true}
                         listeId={liste.id}
+                        user = {user}
                     />
                 ))
             ))}
@@ -46,6 +55,7 @@ export default function AllAllo() {
                         listeName={liste.name}
                         showListeName={true}
                         listeId={liste.id}
+                        user = {user}
                     />
                 ))
             ))}

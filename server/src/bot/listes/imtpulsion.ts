@@ -31,7 +31,7 @@ export default class Imtpulsion implements Liste{
                     let available = AlloAvailability.UNKNOWN;
                     if (status.getText() === "Commander !") {available = AlloAvailability.AVAILABLE}
                     else if (status.getText() === "Indisponible") {available = AlloAvailability.UNAVAILABLE};
-                    result.push({id : DataImtpulsion[index].id, name : DataImtpulsion[index].name, available, description : ""})
+                    result.push({id : DataImtpulsion[index]?.id, name : DataImtpulsion[index]?.name, available, description : ""})
                 })
                 return result;
             })
