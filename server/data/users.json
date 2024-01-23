@@ -1,0 +1,22 @@
+{"groups" : 
+    {"convi" : [
+        {"name" : "Antoine Cheucle",
+        "adress" : "R305",
+        "phone" : "0767345522"},
+        {"name" : "Louis Blanchard",
+        "adress" : "R405",
+        "phone" : "0781076002"},
+        {"name" : "Nathan Claeys",
+        "adress" : "Q406",
+        "phone" : "0652371673"},
+        {"name" : "Arthur Bourmaud",
+        "adress" : "T226",
+        "phone" : "0651857969"},
+        {"name" : "Clément Fedi",
+        "adress" : "P318",
+        "phone" : "0750346412"},
+        {"name" : "Maxime Bedu",
+        "adress" : "R412",
+        "phone" : "0778174615"}
+    ]}
+}
