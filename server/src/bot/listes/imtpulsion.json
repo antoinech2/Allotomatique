@@ -1,20 +1,24 @@
 [
     {
-        "id" : "rice",
-        "name" : "Bol de riz",
-        "webhook" : "https://discord.com/api/webhooks/1194079838403842118/ww_3HfPGrJBhPpZ58klRI6cvH1Qs9s3BgnVD8JQcuLXqfQGrv9snZX9KhspBbQNRQ3nu"
-    },
-    {
-        "id" : "hotDog",
-        "name" : "Hot Dog",
-        "webhook" : "https://discord.com/api/webhooks/1195032986786205766/wq6W1HQU99wQmyZqFQtdjXjnfn8zI5mICwgqFEQ2p2HA2uU1nLKYVkooVo4Mno8pqjgB"
-    },
-    {
         "id" : "burrito",
         "name" : "Burrito",
         "webhook" : "https://discord.com/api/webhooks/1195033083930480671/qWEy2qaWz_0Q7E3K1i9RZfzxnme6NLCTG_EGXoAVqVSxT7f5TuzDx_XPb8v_dp1fpREl"
 
     },
+    {
+        "id" : "hotDog",
+        "name" : "Hot Dog",
+        "webhook" : "https://discord.com/api/webhooks/1195032986786205766/wq6W1HQU99wQmyZqFQtdjXjnfn8zI5mICwgqFEQ2p2HA2uU1nLKYVkooVo4Mno8pqjgB"
+    },{
+        "id" : "hdhalal",
+        "name" : "Hot Dog Halal",
+        "webhook" : ""
+    },{
+        "id" : "rice",
+        "name" : "Bol de riz",
+        "webhook" : "https://discord.com/api/webhooks/1194079838403842118/ww_3HfPGrJBhPpZ58klRI6cvH1Qs9s3BgnVD8JQcuLXqfQGrv9snZX9KhspBbQNRQ3nu"
+    }
+    ,
     {
         "id" : "crepesucre",
         "name" : "Crèpe au sucre",
@@ -38,11 +42,10 @@
         "name" : "Brioche au chocolat",
         "webhook" : "https://discord.com/api/webhooks/1197634969992962121/2r6AAnvoE9Ee9g9LxvqaPrErMR3f0d5qXtzVTzWTPq_55uXb5Ff3xBh34QXAyGIBti2q"
 
-    },
-    {
-        "id" : "painLait",
-        "name" : "Pain au lait",
-        "webhook" : "https://discord.com/api/webhooks/1197634672931373157/bNLl6lVFsDN4KqnxCntD5MexZJt2Cq_NwnFPrHWfibOJm6AJYMFRAJJqelPVJfYGjqEM"
+    },{
+        "id" : "popcorl",
+        "name" : "Pop corn",
+        "webhook" : ""
 
     },
     {

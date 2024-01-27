@@ -45,17 +45,27 @@ export default class Artemis implements Liste{
                     let commandCount = data.response["322877549"]
                     //console.log(commandCount, limit)
 
-                    for (const allo of Object.keys(limit)){
-                        let available = AlloAvailability.UNKNOWN;
-                        if (commandCount[allo] < limit[allo]) {available = AlloAvailability.AVAILABLE}
-                        else if (commandCount[allo] >= limit[allo]) {available = AlloAvailability.UNAVAILABLE};
-                        if (globalAvailability === "Le shotgun est fermé !") {available = AlloAvailability.UNAVAILABLE};
-                        result.push({
-                            id: allo,
-                            name: allo,
-                            available,
-                            description : ""
-                        })
+                    for (const allo of DataArtemis){
+                        if (Object.keys(limit).includes(allo.id)){
+                            let available = AlloAvailability.UNKNOWN;
+                            if (commandCount[allo.id] < limit[allo.id]) {available = AlloAvailability.AVAILABLE}
+                            else if (commandCount[allo.id] >= limit[allo.id]) {available = AlloAvailability.UNAVAILABLE};
+                            if (globalAvailability === "Le shotgun est fermé !") {available = AlloAvailability.UNAVAILABLE};
+                            result.push({
+                                id: allo.id,
+                                name: allo.id,
+                                available,
+                                description : ""
+                            })
+                        }
+                        else {
+                            result.push({
+                                id: allo.id,
+                                name: allo.id,
+                                available : AlloAvailability.UNKNOWN,
+                                description : ""
+                            })
+                        }
                     }
                 }
                 catch (error) {

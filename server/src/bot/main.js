@@ -8,7 +8,11 @@ export async function refreshCache(listes, db){
         console.log(`Liste ${liste.name}...`)
         result[listeId] = await liste.getAllos();
         for (let allo of result[listeId]){
-            await db.commande.count({where : {listeId : liste.id, alloId : allo.id,status : "PENDING"}}).then((count) => {result[listeId].find(curallo => curallo.id == allo.id).pending = count});
+            try {
+                await db.commande.count({where : {listeId : liste.id, alloId : allo.id,status : "PENDING"}}).then((count) => {result[listeId].find(curallo => curallo.id == allo.id).pending = count});
+            } catch (error) {
+                console.error("Erreur lors du comptage : " + error.toString())
+            }
         }
     }
     return result;
@@ -18,7 +22,7 @@ export async function refreshCache(listes, db){
 export async function processQueue(listes, db, cache) {
     for (let listeId in listes) {
         let liste = listes[listeId];
-        db.commande.findAll({where : {listeId : liste.id, status : "PENDING"}}).then(async (commandes) => {//order: Sequelize.literal('random()') //attributes : [[Sequelize.fn('DISTINCT', Sequelize.col('alloId')) ,'alloId']],
+        db.commande.findAll({order: Sequelize.literal('random()'), where : {listeId : liste.id, status : "PENDING"}}).then(async (commandes) => { //attributes : [[Sequelize.fn('DISTINCT', Sequelize.col('alloId')) ,'alloId']],
             console.log(`Tentative de ${commandes.length} commandes pour la liste ${liste.name}...`)
             Loopcommandes:
             for (const commande of commandes) {
@@ -30,12 +34,14 @@ export async function processQueue(listes, db, cache) {
                     case 'success':
                         console.log(`Commande ${commande.id} (${liste.name} ${commande.alloId}) commandée avec succès`)
                         commande.status = "WAITING";
+                        commande.date_commande = new Date();
                         await commande.save();
                         break Loopcommandes;
                         break;
                     case 'success_not_confirmed':
                         console.log(`Commande ${commande.id} (${liste.name} ${commande.alloId}) commandée sans confirmation`)
                         commande.status = "WAITING_NOT_CONFIRMED";
+                        commande.date_commande = new Date();
                         await commande.save();
                         break;              
                     case 'error':
